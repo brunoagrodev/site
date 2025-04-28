@@ -14,9 +14,9 @@ const lustria = Lustria({
 })
 
 export const metadata: Metadata = {
-  title: 'Aprimora Conhecimento - Empresa de Soluções Digitais',
+  title: 'Aprimora Conhecimento - Capacitação e Inclusão Digital para Jovens',
   description:
-    'Destaque-se online conosco! Criamos identidades visuais que fazem a diferença. Vamos conversar?"',
+    'Aprimora Conhecimento é uma ONG dedicada à capacitação de jovens em Design e Tecnologia, promovendo oportunidades de crescimento e inclusão social.',
 }
 
 export default function RootLayout({

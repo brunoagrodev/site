@@ -20,7 +20,7 @@ export default function Home() {
         <DifferencesContent />
         <WorkContent />
         <Services />
-        {/*<Team />*/}
+        <Team />/
         <Question />
         <Footer />
         <WhatsappFloatingLink />

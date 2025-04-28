@@ -1,9 +1,29 @@
+// team.tsx
 'use client'
 
 import Image from 'next/image'
 import { useEffect } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
+
+// Dados dos depoimentos
+const testimonials = [
+  {
+    photo: '/images/depoimento1.jpg', // Substitua pelo caminho real da foto
+    name: 'Maria Silva',
+    description: 'A Aprimora transformou a maneira como gerencio minhas tarefas diárias. A plataforma é intuitiva e me ajudou a aumentar muito minha produtividade. Recomendo fortemente!',
+  },
+  {
+    photo: '/images/depoimento2.jpg', // Substitua pelo caminho real da foto
+    name: 'João Pereira',
+    description: 'Estava procurando uma solução completa para organizar meus projetos e a Aprimora superou minhas expectativas. O suporte ao cliente é excelente e as funcionalidades são incríveis.',
+  },
+  {
+    photo: '/images/depoimento3.jpg', // Substitua pelo caminho real da foto
+    name: 'Ana Rodrigues',
+    description: 'Desde que comecei a usar a Aprimora, minha comunicação com a equipe melhorou significativamente. As ferramentas de colaboração são fantásticas e facilitam muito o trabalho em conjunto.',
+  },
+];
 
 export const Team = () => {
   useEffect(() => {
@@ -13,84 +33,26 @@ export const Team = () => {
     })
   }, [])
 
-  const teamContent = [
-    {
-      name: 'Bruno Ferrari',
-      sub: 'CEO da Aprimora Conhecimento',
-      src: '/team/Bruno.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'Kalyel Costa',
-      sub: 'Produtor de Conteúdo',
-      src: '/team/Kalyel.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'Nathan Mateus',
-      sub: 'Desenvolvedor Web Front-end',
-      src: '/team/Nathan.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'João Carlos',
-      sub: 'Desenvolvedor Web Front-end',
-      src: '/team/Joao.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'Larissa Lins',
-      sub: 'UX|UI Designer',
-      src: '/team/Larissa.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'Antonio Vieira',
-      sub: 'Desenvolvedor Web Full-Stack',
-      src: '/team/Antonio.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'Wesley Bezerra',
-      sub: 'UX|UI Designer',
-      src: '/team/Wesley.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'Rafael Machado',
-      sub: 'UX|UI Designer',
-      src: '/team/Rafael.png',
-      alt: 'Our team',
-    },
-    {
-      name: 'André Thiago',
-      sub: 'Produtor de Conteúdo',
-      src: '/team/Andre.png',
-      alt: 'Our team',
-    },
-  ]
-
   return (
-    <section className="aos-init" data-aos="fade-up" id="team">
-      <div className="container max-w-[900px] px-7 md:px-0">
-        <h1 className="my-14 text-center text-4xl font-bold text-darkBlue md:text-6xl">
-          Nossa equipe
-        </h1>
-        <div className="grid grid-cols-2 gap-2 last:mx-auto md:grid-cols-3">
-          {teamContent.map((item, index) => (
-            <article
+    <section className="py-16 bg-gray-100"> {/* Uma seção com padding e fundo cinza claro */}
+      <div className="container mx-auto text-center">
+        <h2 className="text-3xl font-bold text-gray-800 mb-8" data-aos="fade-up">
+          O que nossos clientes estão dizendo
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <div
               key={index}
-              className="center mx-auto mt-4 grid-flow-row grid-cols-1 last:col-span-full md:last:col-span-1"
+              className="bg-white rounded-lg shadow-md p-6"
               data-aos="fade-up"
+              data-aos-delay={index * 200}
             >
-              <div className="flex flex-col space-y-2 justify-self-center text-center">
-                <Image src={item.src} width={177} height={240} alt={item.alt} />
-                <h3 className="max-w-[177px] text-xl font-bold text-deepBlue">
-                  {item.name}
-                </h3>
-                <p className="max-w-[177px] font-lustria">{item.sub}</p>
+              <div className="relative w-24 h-24 mx-auto rounded-full overflow-hidden mb-4">
+                <Image src={testimonial.photo} alt={`Foto de ${testimonial.name}`} layout="fill" objectFit="cover" />
               </div>
-            </article>
+              <h3 className="text-xl font-semibold text-gray-700 mb-2">{testimonial.name}</h3>
+              <p className="text-gray-600 text-sm italic">"{testimonial.description}"</p>
+            </div>
           ))}
         </div>
       </div>

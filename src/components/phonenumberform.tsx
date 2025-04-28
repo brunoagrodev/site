@@ -26,6 +26,7 @@ export default function PhoneNumberForm() {
 
     if (phoneNumber.includes('_') || phoneNumber === '') {
       setError(true)
+      setResponse({ type: 'error', message: 'Telefone inválido' })
       return
     }
 
@@ -48,27 +49,28 @@ export default function PhoneNumberForm() {
 
       if (response.ok) {
         if (json.success) {
-          // console.log(response)
           setResponse({
             type: 'success',
-            message: 'Thank you for reaching out to us.',
+            message: 'Entraremos em contato em breve...',
           })
+          setError(false)
         } else {
-          // console.log(response)
           setResponse({
             type: 'error',
-            message: json.message,
+            message: json.message || 'Erro ao enviar',
           })
+          setError(false)
         }
       } else {
         throw new Error('Failed to submit form')
       }
     } catch (error) {
-      console.error('Error submitting form:', error)
+      console.error('Erro ao enviar o formulário:', error)
       setResponse({
         type: 'error',
-        message: 'An error occurred while submitting the form',
+        message: 'Erro ao enviar',
       })
+      setError(false)
     }
   }
 
@@ -92,17 +94,18 @@ export default function PhoneNumberForm() {
             maskChar="_"
             alwaysShowMask={false}
             placeholder="(11) 91234-5678"
-            className="text-4 placeholder:text-neutral-light-200 md:text-2 inline-block w-20 flex-1 bg-transparent focus:outline-none"
+            className="text-black placeholder:text-neutral-light-200 md:text-2 inline-block w-20 flex-1 bg-transparent focus:outline-none"
             type="phone"
             value={phoneNumber}
             onChange={(e) => {
               setPhoneNumber(e.target.value)
               setError(false)
+              setResponse({ type: '', message: '' })
             }}
           />
           <button
             type="submit"
-            className="flex h-12 w-24 cursor-pointer flex-col items-center rounded-r-full border-l-2 p-3 text-center font-bold hover:bg-lightHover"
+            className="flex h-12 w-24 cursor-pointer flex-col items-center rounded-r-full border-l-2 p-3 text-center font-bold bg-[#243C60] text-white hover:bg-[#1a314a] border-none"
           >
             {response.type === 'success' ? (
               <FaCheck className="bg-primary-400 aspect-square h-[1lh] w-auto fill-green-600" />
@@ -111,14 +114,19 @@ export default function PhoneNumberForm() {
             )}
           </button>
         </div>
-        {error && (
-          <p className="text-5 md:text-4 absolute ml-20 text-center italic text-red-500">
+        {error && response.type !== 'success' && (
+          <p className="mt-2 text-5 md:text-4 absolute left-1/2 -translate-x-1/2 text-center italic text-[#FF7A00]">
             Telefone Inválido
           </p>
         )}
         {response.type === 'success' && (
-          <p className="text-5 md:text-4 absolute ml-10 mt-2 text-center italic text-white">
-            Entraremos em contato em breve
+          <p className="mt-2 text-5 md:text-4 absolute left-1/2 -translate-x-1/2 text-center italic text-[#FF7A00]">
+            {response.message}
+          </p>
+        )}
+        {response.type === 'error' && !error && (
+          <p className="mt-2 text-5 md:text-4 absolute left-1/2 -translate-x-1/2 text-center italic text-[#FF7A00]">
+            {response.message}
           </p>
         )}
       </form>

@@ -1,102 +1,89 @@
 import Footer from '@/components/footer'
 import HeaderMenu from '@/components/header-menu'
-import WhatsappFloatingLink from '@/components/whatsappfloatinglink'
+import WhatsappFloatingLink from '@/components/whatsappfloatinglink'  
 
 export default function PrivacyPolicy() {
   return (
     <main className="container">
       <HeaderMenu />
       <div className="container py-20">
-        <div className="bg-blue p-10 text-center text-2xl font-bold text-white">
-          <h1>Política de Privacidade e LGPD</h1>
+        {/* Seção de Título com borda estilizada e border-radius maior */}
+        <div className="bg-[#101b2b] border-4 border-blue-500 p-10 text-center text-2xl font-bold text-white rounded-3xl shadow-lg">
+          <h1>Política de Privacidade e Proteção de Dados Pessoais</h1>
         </div>
+        
         <div className="container mt-4 flex h-full flex-col">
-          <ol className="px-2 pl-8 font-bold">Introdução:</ol>
+          {/* Seção de Introdução */}
+          <ol className="px-2 pl-8 font-bold">1. Introdução:</ol>
           <p className="px-4 py-2">
-            Bem-vindo à página de Política de Privacidade e LGPD da Aprimora
-            Conhecimento. Nesta seção, esclarecemos como coletamos, utilizamos,
-            armazenamos e protegemos suas informações pessoais quando você
-            interage conosco. A segurança e confidencialidade de seus dados são
-            prioridades para nós.
+            A Aprimora Conhecimento, organização sem fins lucrativos dedicada à capacitação de jovens nas áreas de Design e Tecnologia, respeita a privacidade e a proteção dos dados pessoais de seus usuários. Esta Política de Privacidade tem como objetivo informar como coletamos, utilizamos, armazenamos e protegemos suas informações pessoais, em conformidade com a Lei Geral de Proteção de Dados Pessoais (LGPD - Lei nº 13.709/2018).
           </p>
           <p className="px-4 py-2">&nbsp;</p>
-          <ol className="px-2 pl-8 font-bold">Quem somos:</ol>
+          
+          {/* Coleta de Dados Pessoais */}
+          <ol className="px-2 pl-8 font-bold">2. Coleta de Dados Pessoais:</ol>
           <p className="px-4 py-2">
-            Visite nosso site em{' '}
-            <a href="http://www.aprimoraconhecimento.com.br">
-              <strong>www.aprimoraconhecimento.com.br</strong>
-            </a>{' '}
-            para conhecer mais sobre nossos serviços e atuação.
-          </p>
-          <p className="px-4 py-2">&nbsp;</p>
-
-          <ol className="px-2 pl-8 font-bold">Coleta de Informações:</ol>
-          <p className="px-4 py-2">
-            Ao falar conosco ou disponibilizar o seu número via formulário,
-            poderemos coletar as seguintes informações:
+            Coletamos dados pessoais de nossos usuários de forma transparente e para finalidades específicas, como:
           </p>
           <ol className="px-2 pl-8">
-            <ul className=" mt-2">
-              <strong>Nome:</strong> Estamos coletando seu nome apenas para
-              saber com quem estamos falando.
-            </ul>{' '}
-            <ul className=" mt-2">
-              <strong>E-mail:</strong> Seu e-mail é coletado para que possamos
-              entrar em contato com você sobre informações relevantes e dúvidas.
-            </ul>{' '}
-            <ul className=" mt-2">
-              <strong>Número de WhatsApp:</strong> Coletamos seu número do
-              WhatsApp para facilitar a comunicação e fornecer suporte em tempo
-              real.{' '}
-            </ul>{' '}
+            <ul className="mt-2">
+              <strong>Nome completo:</strong> Para identificação do usuário.
+            </ul>
+            <ul className="mt-2">
+              <strong>E-mail:</strong> Para envio de informações sobre nossos programas e atividades.
+            </ul>
+            <ul className="mt-2">
+              <strong>Número de telefone (WhatsApp):</strong> Para facilitar a comunicação direta com os interessados.
+            </ul>
           </ol>
           <p className="px-4 py-2">&nbsp;</p>
-
-          <ol className="px-2 pl-8 font-bold">Uso das Informações:</ol>
+          
+          {/* Finalidades do Tratamento de Dados */}
+          <ol className="px-2 pl-8 font-bold">3. Finalidades do Tratamento de Dados:</ol>
           <p className="px-4 py-2">
-            Utilizamos suas informações para fornecer e melhorar nossos
-            serviços, personalizar sua experiência, enviar comunicações de
-            marketing, processar transações, entre outros fins comerciais
-            legítimos. Não compartilhamos suas informações com terceiros para
-            fins de marketing sem seu consentimento explícito.
+            Utilizamos seus dados pessoais exclusivamente para:
           </p>
-          <p className="px-4 py-2">&nbsp;</p>
-
-          <ol className="px-2 pl-8 font-bold">
-            Compartilhamento de informações:
+          <ol className="px-2 pl-8">
+            <ul className="mt-2">
+              Enviar informações sobre nossos programas de capacitação e eventos.
+            </ul>
+            <ul className="mt-2">
+              Facilitar a comunicação com os interessados em participar de nossas atividades e projetos.
+            </ul>
           </ol>
+          <p className="px-4 py-2">&nbsp;</p>
+          
+          {/* Compartilhamento de Dados */}
+          <ol className="px-2 pl-8 font-bold">4. Compartilhamento de Dados:</ol>
           <p className="px-4 py-2">
-            Comprometemo-nos a não compartilhar, vender, alugar ou divulgar suas
-            informações, exceto quando exigido por lei ou autoridade competente.
+            A Aprimora Conhecimento não compartilha seus dados pessoais com terceiros, exceto quando exigido por lei ou para atender a obrigações legais.
           </p>
           <p className="px-4 py-2">&nbsp;</p>
-
-          <ol className="px-2 pl-8 font-bold">Consentimento:</ol>
+          
+          {/* Seus Direitos */}
+          <ol className="px-2 pl-8 font-bold">5. Seus Direitos:</ol>
           <p className="px-4 py-2">
-            Ao utilizar nosso site e fornecer suas informações, você concorda
-            com a coleta, uso e armazenamento conforme esta Política de
-            Privacidade.
+            Você tem o direito de acessar, corrigir, excluir ou solicitar a portabilidade dos seus dados pessoais. Para exercer esses direitos, entre em contato conosco através do e-mail: <strong>aprimoraconhecimento@gmail.com</strong>.
           </p>
           <p className="px-4 py-2">&nbsp;</p>
-
-          <ol className="px-2 pl-8 font-bold">
-            Alterações na Política de Privacidade:
-          </ol>
+          
+          {/* Alterações nesta Política de Privacidade */}
+          <ol className="px-2 pl-8 font-bold">6. Alterações nesta Política de Privacidade:</ol>
           <p className="px-4 py-2">
-            Reservamo-nos o direito de atualizar esta Política de Privacidade
-            periodicamente. Recomendamos que você revise esta página
-            regularmente para estar ciente de quaisquer alterações.
+            Reservamo-nos o direito de atualizar esta Política de Privacidade periodicamente. Recomendamos que você revise esta página regularmente para estar ciente de quaisquer alterações.
           </p>
           <p className="px-4 py-2">&nbsp;</p>
-
+          
+          {/* Contato */}
           <p className="px-4 py-2">
-            Se tiver alguma dúvida sobre esta Política, entre em contato conosco
-            pelo e-mail <strong>aprimoraconhecimento@gmail.com</strong>
+            Se tiver dúvidas sobre esta Política de Privacidade ou sobre o tratamento dos seus dados pessoais, entre em contato conosco pelo e-mail: <strong>aprimoraconhecimento@gmail.com</strong>.
           </p>
         </div>
       </div>
+      
+      {/* Footer e WhatsApp Floating Link */}
       <Footer />
-      <WhatsappFloatingLink />
+      <WhatsappFloatingLink /> 
     </main>
   )
 }

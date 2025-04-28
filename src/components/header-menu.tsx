@@ -113,9 +113,7 @@ export default function HeaderMenu() {
               <a
                 className="flex cursor-pointer flex-row content-center items-center justify-center rounded-full bg-[#243c60] p-5 text-white hover:bg-[#BBC3CE] hover:text-[#101B2B] font-bold"
                 onClick={handleMenu}
-                href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_PHONE_WPP}&text=${encodeURIComponent(
-                  ' Olá! Gostaria de solicitar um orçamento.',
-                )}`}
+                href={`https://api.whatsapp.com/send?phone=${process.env.NEXT_PUBLIC_PHONE_WPP}&text=${encodeURIComponent('Olá, gostaria de entrar em contato com a Aprimora Conhecimento.')}`}
                 target="_blank"
               >
                 <p className="relative top-[2px]">APOIA-SE</p>
@@ -132,7 +130,7 @@ export default function HeaderMenu() {
                   src="/head/instagramlogo.svg"
                   width={20}
                   height={20}
-                  alt=""
+                  alt="Instagram"
                 />
               </a>
               <p>@aprimoraconhecimento</p>
