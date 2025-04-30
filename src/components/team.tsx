@@ -33,7 +33,7 @@ export function Team() {
   return (
     <section className="mt-[72px]" data-aos="fade-up" id="team">
       <div className="container mx-auto px-6">
-        <h1 className="pb-12 text-center font-sans text-6xl font-bold text-darkText">
+        <h1 className="my-14 text-center text-4xl font-bold text-darkBlue md:text-6xl">
           Depoimentos
         </h1>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
