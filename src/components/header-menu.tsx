@@ -42,16 +42,24 @@ export default function HeaderMenu() {
         <Link href="/#contato" className="cursor-pointer" onClick={handleMenu}>
           Contato
         </Link>
-        <Link href="/#apoiase" onClick={handleMenu}>
+        <a
+          href="https://apoia.se/aprimoraconhecimento"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <button className="rounded-full bg-[#243c60] px-6 py-3 text-white hover:bg-[#BBC3CE] hover:text-[#101B2B] font-bold">
             APOIA-SE
           </button>
-        </Link>
+        </a>
       </div>
 
       {/* Menu Mobile */}
       <div className="flex md:hidden">
-        <button className="relative flex h-8 w-10 flex-col justify-between" onClick={handleMenu} aria-label="Toggle menu">
+        <button
+          className="relative flex h-8 w-10 flex-col justify-between"
+          onClick={handleMenu}
+          aria-label="Toggle menu"
+        >
           <div className="h-1 w-7 rounded bg-black"></div>
           <div className="h-1 w-10 rounded bg-black"></div>
           <div className="h-1 w-7 rounded bg-black"></div>
@@ -90,13 +98,16 @@ export default function HeaderMenu() {
               <Link href="/#contato" className="cursor-pointer" onClick={handleMenu}>
                 Contato
               </Link>
-              <Link href="/#apoiase" onClick={handleMenu}>
-                <button
-                  className="rounded-full bg-[#243c60] px-6 py-3 text-white hover:bg-[#BBC3CE] hover:text-[#101B2B] font-bold"
-                >
+              <a
+                href="https://apoia.se/aprimoraconhecimento"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={handleMenu}
+              >
+                <button className="rounded-full bg-[#243c60] px-6 py-3 text-white hover:bg-[#BBC3CE] hover:text-[#101B2B] font-bold">
                   APOIA-SE
                 </button>
-              </Link>
+              </a>
             </div>
 
             <div className="flex flex-row items-center justify-center gap-5">
