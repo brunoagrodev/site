@@ -29,7 +29,7 @@ const textContent = [
   },
 ]
 
-const WorkContent = () => {
+const ComoTrabalhamos = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -38,7 +38,7 @@ const WorkContent = () => {
   }, [])
 
   return (
-    <section className="aos-init mt-[72px]" data-aos="fade-up" id="work">
+    <section className="aos-init mt-[72px]" data-aos="fade-up" id="comotrabalhamos">
       <div className="container w-full justify-center rounded-[56px] bg-deepBlue pb-24 pt-16">
         <h1 className="pb-12 text-center font-sans text-6xl font-bold text-white">
           Como trabalhamos
@@ -75,4 +75,4 @@ const WorkContent = () => {
   )
 }
 
-export default WorkContent
+export default ComoTrabalhamos

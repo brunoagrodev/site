@@ -19,7 +19,7 @@ const Intro = () => {
     >
       <div className="item-center container flex flex-col justify-center gap-8 md:py-10 lg:px-[63px] lg:text-center">
         <h1 className="mt-14 px-5 text-[40px] font-bold text-white md:text-6xl">
-          Conectando Talentos, Transformando Futuros
+          Conectando Talentos, <br />Transformando Futuros
         </h1>
         <p className="mt-0 px-7 pb-12 font-lustria text-xl font-normal leading-relaxed text-white md:text-[25px] lg:px-[160px]">
           A Aprimora Conhecimento é uma iniciativa sem fins lucrativos que prepara estudantes e profissionais para o mercado. 

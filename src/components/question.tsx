@@ -6,7 +6,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const Question = () => {
+const Perguntas = () => {
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -69,4 +69,4 @@ const Question = () => {
   );
 };
 
-export default Question;
+export default Perguntas

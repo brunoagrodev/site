@@ -1,14 +1,14 @@
 import HeaderMenu from '@/components/header-menu'
 import HeaderContent from '@/components/header-content'
-import DifferencesContent from '@/components/differencesContent'
-
 import Intro from '@/components/intro'
-import WorkContent from '@/components/workContent'
-import Footer from '@/components/footer'
-import WhatsappFloatingLink from '@/components/whatsappfloatinglink'
-import Services from '@/components/services'
-import Question from '@/components/question'
-import { Team } from '@/components/team'
+import FloatingArrow from '@/components/floatingarrow'
+import CookieConsent from '@/components/cookies'
+import { Equipe } from '@/components/depoiments'
+import Beneficios from '@/components/benefits'
+import ComoTrabalhamos from '@/components/workContent'
+import Especialidades from '@/components/speacialities'
+import Perguntas from '@/components/question'
+import Rodape from '@/components/footer'
 
 export default function Home() {
   return (
@@ -17,13 +17,14 @@ export default function Home() {
       <div className="container pt-20">
         <HeaderContent />
         <Intro />
-        <DifferencesContent />
-        <WorkContent />
-        <Services />
-        <Team />/
-        <Question />
-        <Footer />
-        <WhatsappFloatingLink />
+        <Beneficios/>
+        <ComoTrabalhamos />
+        <Especialidades />
+        <Equipe />/
+        <Perguntas />
+        <Rodape />
+        <FloatingArrow />
+        <CookieConsent />
       </div>
     </main>
   )
